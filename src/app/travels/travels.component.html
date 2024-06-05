@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<section class="travels">
+    <div class="container">
+      <h2>Nuestros Viajes</h2>
+      <div class="travels-grid">
+        <div class="travel-card" *ngFor="let travel of travels">
+          <img [src]="travel.image" alt="{{travel.title}}">
+          <div class="travel-info">
+            <h3>{{travel.title}}</h3>
+            <p>{{travel.description}}</p>
+            <p class="price">Precio: {{travel.price | currency}}</p>
+            <button (click)="viewDetails(travel)">Ver Más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <app-footer></app-footer>

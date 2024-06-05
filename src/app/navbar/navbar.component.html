@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a routerLink="/">Travel Agency</a>
+        </div>
+        <div class="toggle-wrapper">
+            <span class="navbar-toggle" (click)="toggleMenu()">&#9776;</span>
+        </div>
+        <div class="navbar-menu" [ngClass]="{'show': isMenuOpen}">
+            <a routerLink="/" routerLinkActive="active">Home</a>
+            <a routerLink="/about" routerLinkActive="active">Nosotros</a>
+            <a routerLink="/travels" routerLinkActive="active">Viajes</a>
+            <a routerLink="/blog" routerLinkActive="active">Blog</a>
+            <a routerLink="/contact" routerLinkActive="active">Contáctanos</a>
+            <a routerLink="/profile" routerLinkActive="active">Perfil</a>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>

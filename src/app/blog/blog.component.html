@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<section class="blog">
+    <div class="container">
+      <h2 style="text-align: center;">Blog</h2>
+      <div class="blog-list">
+        <div class="blog-post" *ngFor="let post of blogPosts">
+          <div class="blog-image">
+            <img [src]="post.image" [alt]="post.title">
+          </div>
+          <div class="blog-content">
+            <h3>{{ post.title }}</h3>
+            <p class="date">{{ post.date | date }}</p>
+            <p>{{ post.description }}</p>
+            <button (click)="viewDetails(post)">Leer más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer></app-footer>
+  
